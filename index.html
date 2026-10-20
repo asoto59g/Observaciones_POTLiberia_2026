@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -147,12 +148,19 @@
             margin-bottom: 5px;
         }
 
-        .alert-banner span {
+        .map-link {
             color: #f4f4f4;
             font-weight: 400;
             font-size: 1.1rem;
-            display: block;
+            display: inline-block;
             margin-bottom: 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .map-link:hover {
+            color: var(--liberia-yellow);
+            text-decoration: underline;
         }
 
         /* Llamado a la acción mejorado */
@@ -174,7 +182,8 @@
 
         .portal-link {
             display: inline-block;
-            margin-top: 12px;
+            margin-top: 5px;
+            margin-bottom: 12px;
             color: var(--liberia-yellow);
             text-decoration: none;
             font-weight: 600;
@@ -318,7 +327,10 @@
         <div class="alert-banner">
             <h2>📢 Convocatoria a Audiencia Pública</h2>
             <p>Jueves 05 de Noviembre de 2026 • 5:00 PM</p>
-            <span>📍 Estadio Edgardo Baltodano Briceño</span>
+            <a href="https://maps.app.goo.gl/FYUnREaGcNpioUZC9" target="_blank" rel="noopener noreferrer" class="map-link">
+                📍 Estadio Edgardo Baltodano Briceño ↗
+            </a>
+            <br>
             <a href="https://www.muniliberia.go.cr" target="_blank" rel="noopener noreferrer" class="portal-link">🌐 Infórmese accediendo al Portal Oficial de la Municipalidad de Liberia (Toda la información del POT) &rarr;</a>
             <div class="cta-note">
                 ✍️ <strong>¡Haga oír su voz!</strong> Se invita cordialmente a toda la ciudadanía, comunidades y organizaciones a presentar sus propios aportes y observaciones técnicas formales sobre el POT 2026 ante la Municipalidad de Liberia antes de la realización de la audiencia pública.
