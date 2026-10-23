@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Repositorio ciudadano de observaciones técnicas formales presentadas para la defensa del ordenamiento territorial, la movilidad y el ambiente en el cantón de Liberia (POT 2026).">
+    
+    <link rel="alternate" type="application/rss+xml" title="Feed RSS de Observaciones POT Liberia 2026" href="feed.xml">
+    
     <title>Observaciones Ciudadanas | POT Liberia 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -31,7 +34,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Fondo dinámico amarillo y negro */
         .background-blobs {
             position: fixed;
             top: 0;
@@ -113,7 +115,6 @@
             line-height: 1.6;
         }
 
-        /* Banner de Audiencia Pública y Convocatoria */
         .alert-banner {
             background: rgba(255, 215, 0, 0.1);
             backdrop-filter: blur(12px);
@@ -124,13 +125,6 @@
             text-align: center;
             margin-bottom: 50px;
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-            animation: pulse-border 2.5s infinite;
-        }
-
-        @keyframes pulse-border {
-            0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); }
-            50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.5); }
-            100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); }
         }
 
         .alert-banner h2 {
@@ -163,9 +157,24 @@
             text-decoration: underline;
         }
 
-        /* Llamado a la acción mejorado */
+        .portal-link {
+            display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            color: var(--liberia-yellow);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dashed var(--liberia-yellow);
+            transition: all 0.3s ease;
+        }
+
+        .portal-link:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
         .cta-note {
-            margin-top: 15px;
+            margin-top: 20px;
             padding: 15px 20px;
             background: rgba(0, 0, 0, 0.4);
             border-left: 4px solid var(--liberia-yellow);
@@ -180,23 +189,6 @@
             color: var(--liberia-yellow);
         }
 
-        .portal-link {
-            display: inline-block;
-            margin-top: 5px;
-            margin-bottom: 12px;
-            color: var(--liberia-yellow);
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px dashed var(--liberia-yellow);
-            transition: all 0.3s ease;
-        }
-
-        .portal-link:hover {
-            color: #fff;
-            border-color: #fff;
-        }
-
-        /* Grid de Tarjetas */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -242,6 +234,19 @@
             margin-bottom: 15px;
             color: #fff;
             line-height: 1.3;
+        }
+
+        .badge-new {
+            background-color: #ff4757;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.6rem;
+            font-weight: 800;
+            vertical-align: super;
+            margin-left: 8px;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 5px rgba(255, 71, 87, 0.4);
         }
 
         .card p {
@@ -323,7 +328,6 @@
             <p>Repositorio ciudadano de observaciones técnicas formales presentadas para la defensa del ordenamiento territorial, la movilidad y el ambiente en el cantón de Liberia.</p>
         </header>
 
-        <!-- Banner de Convocatoria y Participación -->
         <div class="alert-banner">
             <h2>📢 Convocatoria a Audiencia Pública</h2>
             <p>Jueves 05 de Noviembre de 2026 • 5:00 PM</p>
@@ -331,7 +335,7 @@
                 📍 Estadio Edgardo Baltodano Briceño ↗
             </a>
             <br>
-            <a href="https://www.muniliberia.go.cr" target="_blank" rel="noopener noreferrer" class="portal-link">🌐 Infórmese accediendo al Portal Oficial de la Municipalidad de Liberia (Toda la información del POT) &rarr;</a>
+            <a href="https://www.muniliberia.go.cr" target="_blank" rel="noopener noreferrer" class="portal-link">🌐 Infórmese accediendo al Portal Oficial de la Municipalidad de Liberia &rarr;</a>
             <div class="cta-note">
                 ✍️ <strong>¡Haga oír su voz!</strong> Se invita cordialmente a toda la ciudadanía, comunidades y organizaciones a presentar sus propios aportes y observaciones técnicas formales sobre el POT 2026 ante la Municipalidad de Liberia antes de la realización de la audiencia pública.
             </div>
@@ -339,55 +343,29 @@
 
         <div class="grid">
             
-            <!-- Tarjeta 1 (es-20261005) -->
+            <!-- 3 ÚLTIMOS OFICIOS (Cronológicamente más recientes con etiqueta NUEVO) -->
             <div class="card">
-                <div class="card-tag">Zonificación</div>
-                <h2>Inviabilidad Transecto T6 en Calle 11F</h2>
-                <p>Demostración técnica sobre la incapacidad vial de la Calle 11F en Barrio INVU 2 para soportar alta densidad urbana. Solicitud de reclasificación a T5 para evitar el colapso vial en este callejón sin salida.</p>
-                <a href="es-20261005.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
+                <div class="card-tag">Ciudad Inteligente</div>
+                <h2>Estrategia y Proyectos IoT <sup class="badge-new">NUEVO</sup></h2>
+                <p>Planteamiento de proyectos piloto vinculantes: Centro de videovigilancia (C4), sensores de inundación IoT, digitalización municipal y desarrollo del Hub Guanacaste Tech.</p>
+                <a href="es-20261023.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
             </div>
 
-            <!-- Tarjeta 2 (es-20261008) -->
             <div class="card">
-                <div class="card-tag">Vialidad Urbana</div>
-                <h2>Prohibición de Estacionamiento en INVU 2</h2>
-                <p>Observación sobre la inviabilidad y conflicto socio-espacial de prohibir parqueos en calles de 7.00 m en urbanizaciones consolidadas. Propuesta de "Vías de Tránsito Compartido" a 20 km/h.</p>
-                <a href="es-20261008.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
+                <div class="card-tag">Datos Abiertos</div>
+                <h2>Geoportal Interactivo Oficial <sup class="badge-new">NUEVO</sup></h2>
+                <p>Solicitud para incluir un artículo transitorio que institucionalice la publicación del Mapa Oficial del POT en un Geoportal y garantice la libre descarga de capas espaciales ciudadanas.</p>
+                <a href="es-20261022.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
             </div>
 
-            <!-- Tarjeta 3 (es-20261014) -->
             <div class="card">
-                <div class="card-tag">Movilidad</div>
-                <h2>Pacificación del Tránsito a 40 km/h</h2>
-                <p>Observación legal y de diseño espacial para reducir el límite de velocidad en vías estructurantes residenciales de 50 a 40 km/h, priorizando la vida humana sobre el vehículo motorizado.</p>
-                <a href="es-20261014.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
+                <div class="card-tag">Espacio Público</div>
+                <h2>Chatarra Aérea y Cableado <sup class="badge-new">NUEVO</sup></h2>
+                <p>Propuesta para regular la saturación de cableado en desuso, tipificándolo como contaminación visual e implementando zonas de soterramiento y convenios interinstitucionales.</p>
+                <a href="es-20261021.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
             </div>
 
-            <!-- Tarjeta 4 (es-20261015) -->
-            <div class="card">
-                <div class="card-tag">Infraestructura</div>
-                <h2>Crisis Puente El Real y Par Vial San Miguel</h2>
-                <p>Estudio de viabilidad técnica para solucionar el aislamiento del sector sur, proponiendo el circuito "Par Vial San Miguel" y solicitando conservación patrimonial para el Puente El Real.</p>
-                <a href="es-20261015.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
-            </div>
-
-            <!-- Tarjeta 5 (es-2026101901) -->
-            <div class="card">
-                <div class="card-tag">Vialidad Nacional</div>
-                <h2>Reserva Preventiva en Ruta Nacional 21</h2>
-                <p>Propuesta técnica para establecer un retiro municipal de 16.00 m adicionales (8 m por lado) en la RN 21 para resguardar espacio para futuras vías marginales y ciclovías segregadas.</p>
-                <a href="es-2026101901.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
-            </div>
-
-            <!-- Tarjeta 6 (es-2026101902) -->
-            <div class="card">
-                <div class="card-tag">Urbanismo</div>
-                <h2>Secuenciación de Peatonización Central</h2>
-                <p>Exigencia de condicionar legalmente los cierres vehiculares peatonales en el casco histórico a la construcción previa del cruce Par Vial San Miguel, evitando el estrangulamiento vial del cantón.</p>
-                <a href="es-2026101902.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
-            </div>
-
-            <!-- Tarjeta 7 (es-20261020) -->
+            <!-- RESTO DE OFICIOS EN ORDEN CRONOLÓGICO -->
             <div class="card">
                 <div class="card-tag">Costas / ZMT</div>
                 <h2>Inconsistencia Cartográfica (Playa Iguanita)</h2>
@@ -395,12 +373,46 @@
                 <a href="es-20261020.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
             </div>
 
-            <!-- Tarjeta 8 (es-20261111_3) -->
             <div class="card">
-                <div class="card-tag">Medio Ambiente</div>
-                <h2>Coeficiente de Infiltración Mínima (CIM)</h2>
-                <p>Observación técnica para establecer un 15% de área permeable innegociable frente a incentivos urbanísticos, fomentando la recarga de acuíferos, arborización nativa y pavimentos rústicos.</p>
-                <a href="es-20261111_3.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
+                <div class="card-tag">Vialidad Nacional</div>
+                <h2>Reserva Preventiva en Ruta Nacional 21</h2>
+                <p>Propuesta técnica para establecer un retiro municipal de 16.00 m adicionales (8 m por lado) en la RN 21 para resguardar espacio para futuras vías marginales y ciclovías segregadas.</p>
+                <a href="es-2026101901.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Urbanismo</div>
+                <h2>Secuenciación de Peatonización Central</h2>
+                <p>Exigencia de condicionar legalmente los cierres vehiculares peatonales en el casco histórico a la construcción previa del cruce Par Vial San Miguel, evitando el estrangulamiento vial del cantón.</p>
+                <a href="es-2026101902.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Infraestructura</div>
+                <h2>Crisis Puente El Real y Par Vial San Miguel</h2>
+                <p>Estudio de viabilidad técnica para solucionar el aislamiento del sector sur, proponiendo el circuito "Par Vial San Miguel" y solicitando conservación patrimonial para el Puente El Real.</p>
+                <a href="es-20261015.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Movilidad</div>
+                <h2>Pacificación del Tránsito a 40 km/h</h2>
+                <p>Observación legal y de diseño espacial para reducir el límite de velocidad en vías estructurantes residenciales de 50 a 40 km/h, priorizando la vida humana sobre el vehículo motorizado.</p>
+                <a href="es-20261014.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Vialidad Urbana</div>
+                <h2>Prohibición de Estacionamiento en INVU 2</h2>
+                <p>Observación sobre la inviabilidad y conflicto socio-espacial de prohibir parqueos en calles de 7.00 m en urbanizaciones consolidadas. Propuesta de "Vías de Tránsito Compartido" a 20 km/h.</p>
+                <a href="es-20261008.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Zonificación</div>
+                <h2>Inviabilidad Transecto T6 en Calle 11F</h2>
+                <p>Demostración técnica sobre la incapacidad vial de la Calle 11F en Barrio INVU 2 para soportar alta densidad urbana. Solicitud de reclasificación a T5 para evitar el colapso vial en este callejón sin salida.</p>
+                <a href="es-20261005.pdf" target="_blank" rel="noopener noreferrer" class="btn">📄 Leer Documento PDF</a>
             </div>
 
         </div>
