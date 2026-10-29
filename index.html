@@ -292,10 +292,9 @@
             flex-grow: 1;
         }
 
-        /* ----- DISEÑO PARA LOS BOTONES Y AUDIO CORREGIDO ----- */
         .action-buttons {
             display: flex;
-            flex-direction: column; /* Apila el botón y el audio para garantizar el ancho máximo */
+            flex-direction: column;
             gap: 15px;
             margin-top: auto; 
             width: 100%;
@@ -315,7 +314,7 @@
             transition: all 0.3s ease;
             font-size: 0.85rem;
             height: 44px; 
-            width: 100%; /* El botón ahora ocupa todo el ancho */
+            width: 100%; 
         }
 
         .btn-pdf {
@@ -330,7 +329,6 @@
             transform: scale(1.02);
         }
 
-        /* Contenedor del reproductor a todo lo ancho */
         .audio-wrapper {
             width: 100%;
             display: flex;
@@ -421,7 +419,7 @@
             
             <div class="card">
                 <div class="card-tag">Ciudad Inteligente</div>
-                <h2>Estrategia y Proyectos IoT <span class="file-name">es-20261023.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <h2>Estrategia y Proyectos IoT <span class="file-name">es-20261023.pdf</span></h2>
                 <span class="card-date">📅 23 de octubre de 2026</span>
                 <p>Planteamiento de proyectos piloto vinculantes: Centro de videovigilancia (C4), sensores de inundación IoT, digitalización municipal y desarrollo del Hub Guanacaste Tech.</p>
                 <div class="action-buttons">
@@ -436,7 +434,7 @@
 
             <div class="card">
                 <div class="card-tag">Datos Abiertos</div>
-                <h2>Geoportal Interactivo Oficial <span class="file-name">es-20261022.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <h2>Geoportal Interactivo Oficial <span class="file-name">es-20261022.pdf</span></h2>
                 <span class="card-date">📅 22 de octubre de 2026</span>
                 <p>Solicitud para incluir un artículo transitorio que institucionalice la publicación del Mapa Oficial del POT en un Geoportal y garantice la libre descarga de capas espaciales ciudadanas.</p>
                 <div class="action-buttons">
@@ -451,7 +449,7 @@
 
             <div class="card">
                 <div class="card-tag">Espacio Público</div>
-                <h2>Chatarra Aérea y Cableado <span class="file-name">es-20261021.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <h2>Chatarra Aérea y Cableado <span class="file-name">es-20261021.pdf</span></h2>
                 <span class="card-date">📅 21 de octubre de 2026</span>
                 <p>Propuesta para regular la saturación de cableado en desuso, tipificándolo como contaminación visual e implementando zonas de soterramiento y convenios interinstitucionales.</p>
                 <div class="action-buttons">
@@ -584,6 +582,41 @@
             Aportes técnicos basados en la Ley de Planificación Urbana N.º 4240</p>
         </footer>
     </div>
+
+    <!-- SCRIPT DE REPRODUCCIÓN CONTINUA (PLAYLIST) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audios = document.querySelectorAll('.audio-player');
+            
+            audios.forEach((audio, index) => {
+                // Evento 1: Cuando el audio actual termina, reproducir el siguiente
+                audio.addEventListener('ended', () => {
+                    // Verificamos que no sea el último audio de la lista
+                    if (index + 1 < audios.length) {
+                        const nextAudio = audios[index + 1];
+                        
+                        // Hacemos scroll suave hacia la tarjeta del siguiente audio
+                        nextAudio.closest('.card').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                        
+                        // Iniciamos la reproducción del siguiente
+                        nextAudio.play();
+                    }
+                });
+                
+                // Evento 2: Si el usuario da "play", pausar los demás audios
+                audio.addEventListener('play', () => {
+                    audios.forEach((otherAudio) => {
+                        if (otherAudio !== audio) {
+                            otherAudio.pause();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
