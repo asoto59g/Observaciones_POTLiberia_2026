@@ -15,6 +15,9 @@ Para mantener a la comunidad informada de manera automática y sin comprometer d
 
 ## 📄 Archivos de Observaciones (PDF y Audio)
 
+*   **es-20261026:**
+    *   **Tema:** Regulación Ambiental e Hídrica para Centros de Datos (Data Centers).
+    *   **Resumen:** Observación técnica sobre la omisión normativa de Centros de Datos de hiperescala. Solicita crear una categoría específica de uso de suelo, prohibir el uso de agua potable o subterránea para enfriamiento evaporativo, exigir tecnologías de enfriamiento seco (Dry Cooling) y requerir un balance de energía 100% renovable con dictámenes previos de AyA/SENARA.
 *   **es-20261023:**
     *   **Tema:** Estrategia de Ciudad Inteligente y Proyectos IoT.
     *   **Resumen:** Planteamiento de proyectos piloto vinculantes: Centro de videovigilancia (C4 Cantonal), sensores de inundación IoT, digitalización municipal y desarrollo del Hub Guanacaste Tech.
