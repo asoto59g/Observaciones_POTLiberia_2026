@@ -11,11 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --liberia-yellow: #FFD700;
-            --liberia-black: #0a0a0a;
+            /* 🇨🇷 Colores de la Bandera de Costa Rica adaptados a diseño web moderno */
+            --cr-blue: #002B7F;       /* Azul Costa Rica */
+            --cr-red: #CE1126;        /* Rojo Costa Rica */
+            --cr-white: #FFFFFF;      /* Blanco Puro */
+            --cr-blue-glow: rgba(0, 43, 127, 0.4);
+            --cr-red-glow: rgba(206, 17, 38, 0.3);
+            
+            --bg-base: #07090e;
             --text-light: #f4f4f4;
-            --glass-bg: rgba(20, 20, 20, 0.6);
-            --glass-border: rgba(255, 215, 0, 0.2);
+            --glass-bg: rgba(15, 18, 25, 0.7);
+            --glass-border: rgba(0, 43, 127, 0.3);
             --pdf-color: #ff6b6b;
             color-scheme: dark; 
         }
@@ -28,7 +34,7 @@
         }
 
         body {
-            background-color: var(--liberia-black);
+            background-color: var(--bg-base);
             color: var(--text-light);
             min-height: 100vh;
             position: relative;
@@ -36,6 +42,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* 🇨🇷 Fondo dinámico tricolor (Azul, Blanco y Rojo difuminados) */
         .background-blobs {
             position: fixed;
             top: 0;
@@ -44,38 +51,38 @@
             height: 100vh;
             z-index: -1;
             overflow: hidden;
-            background: radial-gradient(circle at top left, #1a1a1a, #000000);
+            background: radial-gradient(circle at top left, #0b132b, #07090e);
         }
 
         .blob {
             position: absolute;
-            filter: blur(80px);
-            opacity: 0.4;
+            filter: blur(90px);
+            opacity: 0.35;
             border-radius: 50%;
-            animation: float 10s infinite alternate ease-in-out;
+            animation: float 12s infinite alternate ease-in-out;
             will-change: transform;
         }
 
         .blob-1 {
             top: -10%;
             left: -10%;
-            width: 500px;
-            height: 500px;
-            background: var(--liberia-yellow);
+            width: 550px;
+            height: 550px;
+            background: var(--cr-blue);
         }
 
         .blob-2 {
             bottom: -20%;
             right: -10%;
-            width: 600px;
-            height: 600px;
-            background: #b39700;
-            animation-delay: -5s;
+            width: 650px;
+            height: 650px;
+            background: var(--cr-red);
+            animation-delay: -6s;
         }
 
         @keyframes float {
             0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(50px, 50px) scale(1.1); }
+            100% { transform: translate(40px, 40px) scale(1.08); }
         }
 
         .container {
@@ -92,21 +99,24 @@
         header h1 {
             font-size: 3rem;
             font-weight: 800;
-            color: var(--liberia-yellow);
+            color: var(--cr-white);
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 5px;
-            text-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            text-shadow: 0 4px 20px var(--cr-blue-glow);
+            border-bottom: 4px solid var(--cr-red);
+            display: inline-block;
+            padding-bottom: 5px;
         }
 
         .subtitle-propuesta {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #ffffff;
+            color: #d1d5db;
             letter-spacing: 3px;
             text-transform: uppercase;
+            margin-top: 15px;
             margin-bottom: 20px;
-            opacity: 0.9;
         }
 
         header p {
@@ -117,20 +127,21 @@
             line-height: 1.6;
         }
 
+        /* 🇨🇷 Banner patriótico con acentos tricolores */
         .alert-banner {
-            background: rgba(255, 215, 0, 0.1);
+            background: linear-gradient(135deg, rgba(0, 43, 127, 0.2), rgba(206, 17, 38, 0.15));
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 2px solid var(--liberia-yellow);
+            border: 2px solid var(--cr-blue);
             border-radius: 15px;
             padding: 25px;
             text-align: center;
             margin-bottom: 50px;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            box-shadow: 0 0 25px var(--cr-blue-glow);
         }
 
         .alert-banner h2 {
-            color: #fff;
+            color: var(--cr-white);
             font-size: 1.6rem;
             margin-bottom: 8px;
             text-transform: uppercase;
@@ -138,7 +149,7 @@
         }
 
         .alert-banner p {
-            color: var(--liberia-yellow);
+            color: #93c5fd;
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 5px;
@@ -155,7 +166,7 @@
         }
 
         .map-link:hover {
-            color: var(--liberia-yellow);
+            color: var(--cr-red);
             text-decoration: underline;
         }
 
@@ -163,23 +174,23 @@
             display: inline-block;
             margin-top: 5px;
             margin-bottom: 15px;
-            color: var(--liberia-yellow);
+            color: #93c5fd;
             text-decoration: none;
             font-weight: 600;
-            border-bottom: 1px dashed var(--liberia-yellow);
+            border-bottom: 1px dashed var(--cr-blue);
             transition: all 0.3s ease;
         }
 
         .portal-link:hover {
-            color: #fff;
-            border-color: #fff;
+            color: var(--cr-white);
+            border-color: var(--cr-white);
         }
 
         .cta-note {
             margin-top: 20px;
             padding: 15px 20px;
-            background: rgba(0, 0, 0, 0.4);
-            border-left: 4px solid var(--liberia-yellow);
+            background: rgba(0, 0, 0, 0.5);
+            border-left: 4px solid var(--cr-red);
             border-radius: 8px;
             font-size: 1rem;
             color: #e0e0e0;
@@ -188,7 +199,7 @@
         }
 
         .cta-note strong {
-            color: var(--liberia-yellow);
+            color: #fca5a5;
         }
         
         .form-link {
@@ -196,14 +207,14 @@
             text-align: center;
             margin-top: 15px;
             font-size: 1.1rem;
-            color: var(--liberia-yellow);
+            color: #93c5fd;
             text-decoration: underline;
             font-weight: 800;
             transition: color 0.3s ease;
         }
         
         .form-link:hover {
-            color: #fff;
+            color: var(--cr-white);
         }
 
         .grid {
@@ -212,6 +223,7 @@
             gap: 30px;
         }
 
+        /* 🇨🇷 Tarjetas con bordes sutiles inspirados en la bandera */
         .card {
             background: var(--glass-bg);
             backdrop-filter: blur(12px);
@@ -219,22 +231,22 @@
             border: 1px solid var(--glass-border);
             border-radius: 20px;
             padding: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
         }
 
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.25);
-            border-color: rgba(255, 215, 0, 0.6);
+            box-shadow: 0 15px 40px rgba(0, 43, 127, 0.35);
+            border-color: var(--cr-red);
         }
 
         .card-tag {
-            background: var(--liberia-yellow);
-            color: var(--liberia-black);
+            background: var(--cr-blue);
+            color: var(--cr-white);
             font-size: 0.75rem;
             font-weight: 800;
             padding: 6px 14px;
@@ -243,6 +255,7 @@
             margin-bottom: 18px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .card h2 {
@@ -255,7 +268,7 @@
 
         .file-name {
             font-size: 0.75rem;
-            color: #a0a0a0;
+            color: #94a3b8;
             font-family: monospace;
             font-weight: 400;
             margin-left: 8px;
@@ -265,14 +278,22 @@
 
         .card-date {
             font-size: 0.85rem;
-            color: var(--liberia-yellow);
+            color: #93c5fd;
             margin-bottom: 15px;
             font-weight: 600;
             display: block;
         }
+        
+        .audio-duration {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-bottom: 15px;
+            display: block;
+            font-style: italic;
+        }
 
         .badge-new {
-            background-color: #ff4757;
+            background-color: var(--cr-red);
             color: white;
             padding: 3px 8px;
             border-radius: 12px;
@@ -281,12 +302,12 @@
             vertical-align: super;
             margin-left: 8px;
             letter-spacing: 1px;
-            box-shadow: 0 2px 5px rgba(255, 71, 87, 0.4);
+            box-shadow: 0 2px 8px rgba(206, 17, 38, 0.6);
         }
 
         .card p {
             font-size: 0.95rem;
-            color: #ccc;
+            color: #cbd5e1;
             margin-bottom: 25px;
             line-height: 1.6;
             flex-grow: 1;
@@ -318,14 +339,14 @@
         }
 
         .btn-pdf {
-            border: 2px solid var(--pdf-color);
-            color: var(--pdf-color);
+            border: 2px solid var(--cr-red);
+            color: #fca5a5;
         }
 
         .btn-pdf:hover {
-            background: var(--pdf-color);
-            color: var(--liberia-black);
-            box-shadow: 0 0 15px rgba(255, 107, 107, 0.4);
+            background: var(--cr-red);
+            color: var(--cr-white);
+            box-shadow: 0 0 15px rgba(206, 17, 38, 0.5);
             transform: scale(1.02);
         }
 
@@ -348,7 +369,7 @@
             text-align: center;
             margin-top: 50px;
             font-size: 0.9rem;
-            color: #aaa;
+            color: #94a3b8;
             font-style: italic;
         }
 
@@ -356,10 +377,10 @@
             text-align: center;
             margin: 15px 0 20px 0;
             font-size: 1.2rem;
-            color: var(--liberia-yellow);
+            color: #93c5fd;
             font-weight: 600;
             letter-spacing: 1px;
-            text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+            text-shadow: 0 2px 10px rgba(0, 43, 127, 0.4);
         }
 
         footer {
@@ -367,13 +388,13 @@
             margin-top: 40px;
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #888;
+            color: #94a3b8;
             font-size: 0.9rem;
             line-height: 1.6;
         }
 
         footer strong {
-            color: var(--liberia-yellow);
+            color: var(--cr-white);
         }
 
         @media (max-width: 768px) {
@@ -382,7 +403,7 @@
             .alert-banner h2 { font-size: 1.3rem; }
             .alert-banner p { font-size: 1.15rem; }
             .grid { grid-template-columns: 1fr; }
-            .cta-note { text-align: center; border-left: none; border-top: 4px solid var(--liberia-yellow); }
+            .cta-note { text-align: center; border-left: none; border-top: 4px solid var(--cr-red); }
         }
     </style>
 </head>
@@ -396,7 +417,7 @@
     <div class="container">
         <header>
             <h1>POT Liberia 2026</h1>
-            <div class="subtitle-propuesta">Propuesta Plan Regulador</div>
+            <div class="subtitle-propuesta">Propuesta Plan Regulador • Costa Rica</div>
             <p>Repositorio ciudadano de observaciones técnicas formales presentadas para la defensa del ordenamiento territorial, la movilidad y el ambiente en el cantón de Liberia.</p>
         </header>
 
@@ -418,10 +439,55 @@
         <div class="grid">
             
             <div class="card">
+                <div class="card-tag">Macro-Desarrollos</div>
+                <h2>Regulación de Agua y Vialidad (NyA) <span class="file-name">es-20261102.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <span class="card-date">📅 02 de noviembre de 2026</span>
+                <p>Condicionamiento territorial preventivo. Exige priorizar agua para consumo humano (Art 50) frente a lagunas artificiales y supeditar accesos en Ruta 21 a dictámenes estrictos del MOPT.</p>
+                <div class="action-buttons">
+                    <a href="es-20261102.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-pdf">📄 PDF</a>
+                    <div class="audio-wrapper">
+                        <audio controls preload="metadata" class="audio-player">
+                            <source src="audios/es-20261102.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Saneamiento Ambiental</div>
+                <h2>Regulación de Aguas Residuales y Vertidos <span class="file-name">es-20261030.pdf</span></h2>
+                <span class="card-date">📅 30 de octubre de 2026</span>
+                <p>Exigencia de condicionar la densificación (Transectos T5 y T6) a la instalación de Plantas de Tratamiento (PTAR) y prohibir estrictamente conexiones ilegales de aguas negras al sistema pluvial municipal.</p>
+                <div class="action-buttons">
+                    <a href="es-20261030.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-pdf">📄 PDF</a>
+                    <div class="audio-wrapper">
+                        <audio controls preload="metadata" class="audio-player">
+                            <source src="audios/es-20261030.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Patrimonio Vivo</div>
+                <h2>Protección de Árboles Centenarios <span class="file-name">es-20261029.pdf</span></h2>
+                <span class="card-date">📅 29 de octubre de 2026</span>
+                <p>Observación para catalogar y proteger los árboles de Guanacaste y las históricas mangas de Avenida 25 de Julio. Prohíbe su tala ante desarrollos constructivos privados y regula podas severas.</p>
+                <div class="action-buttons">
+                    <a href="es-20261029.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-pdf">📄 PDF</a>
+                    <div class="audio-wrapper">
+                        <audio controls preload="metadata" class="audio-player">
+                            <source src="audios/es-20261029.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
                 <div class="card-tag">Regulación Ambiental</div>
-                <h2>Regulación para Centros de Datos <span class="file-name">es-20261026.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <h2>Regulación para Centros de Datos <span class="file-name">es-20261026.pdf</span></h2>
                 <span class="card-date">📅 26 de octubre de 2026</span>
-                <p>Observación sobre la omisión normativa de Centros de Datos de hiperescala. Exige prohibir el uso de agua potable para enfriamiento (Dry Cooling), garantizar energía 100% renovable y requerir dictámenes hídricos de AyA/SENARA.</p>
+                <p>Observación sobre la omisión normativa de Centros de Datos de hiperescala. Exige prohibir el uso de agua potable para enfriamiento (Dry Cooling), garantizar energía 100% renovable y requerir dictámenes hídricos.</p>
                 <div class="action-buttons">
                     <a href="es-20261026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-pdf">📄 PDF</a>
                     <div class="audio-wrapper">
@@ -521,6 +587,22 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="card">
+                <div class="card-tag">Drenaje Pluvial</div>
+                <h2>Capa de Inundación y Drenaje <span class="file-name">es-20261017.pdf</span></h2>
+                <span class="card-date">📅 17 de octubre de 2026</span>
+                <span class="audio-duration">Duración del audio: [X:XX min]</span>
+                <p>Objeción legal sobre la capa municipal de anegamiento. Aporta cartografía corregida y señala cuellos de botella en la red pluvial ante la densificación propuesta.</p>
+                <div class="action-buttons">
+                    <a href="es-20261017.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-pdf">📄 PDF</a>
+                    <div class="audio-wrapper">
+                        <audio controls preload="metadata" class="audio-player">
+                            <source src="audios/es-20261017.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
 
             <div class="card">
                 <div class="card-tag">Infraestructura</div>
@@ -571,7 +653,7 @@
                 <div class="card-tag">Zonificación</div>
                 <h2>Inviabilidad Transecto T6 en Calle 11F <span class="file-name">es-20261005.pdf</span></h2>
                 <span class="card-date">📅 05 de octubre de 2026</span>
-                <p>Demostración técnica sobre la incapacidad vial de la Calle 11F en Barrio INVU 2 para soportar alta densidad urbana. Solicitud de reclasificación a T5 para evitar el colapso vial en este callejón sin salida.</p>
+                <p>Demostración técnica sobre la incapacidad vial de la Calle 11F in Barrio INVU 2 para soportar alta densidad urbana. Solicitud de reclasificación a T5 para evitar el colapso vial en este callejón sin salida.</p>
                 <div class="action-buttons">
                     <a href="es-20261005.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-pdf">📄 PDF</a>
                     <div class="audio-wrapper">
@@ -590,7 +672,7 @@
         
         <div class="upcoming-teaser">
             ⏳ Espere más observaciones próximamente...
-            <div style="font-size: 0.9rem; color: #a0a0a0; margin-top: 5px; font-weight: 400; letter-spacing: 0;">Actual presentadas 11 de 20 Total</div>
+            <div style="font-size: 0.9rem; color: #93c5fd; margin-top: 5px; font-weight: 400; letter-spacing: 0;">Actual presentadas 15 de 20 Total</div>
         </div>
 
         <footer>
