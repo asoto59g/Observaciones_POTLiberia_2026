@@ -1,3 +1,6 @@
+<img width="1271" height="564" alt="image" src="https://github.com/user-attachments/assets/17b564cf-d287-4bb4-a324-bcce6fb3e1a3" />
+
+
 # Observaciones Técnicas al POT Liberia 2026
 
 Este repositorio contiene una colección de oficios y observaciones técnicas formales presentadas a la Comisión del Plan de Ordenamiento Territorial (POT), Alcaldía y Concejo Municipal de Liberia, Guanacaste, durante la fase de consulta pública del POT 2026.
