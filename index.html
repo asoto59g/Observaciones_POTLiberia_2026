@@ -139,33 +139,64 @@
             font-weight: 600;
             margin-bottom: 5px;
         }
-        .map-link {
-            color: #f4f4f4;
-            font-weight: 400;
+        
+        /* Botones de acción mejorados */
+        .map-link, .portal-link, .form-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            padding: 12px 24px;
+            font-weight: 600;
             font-size: 1.1rem;
-            display: inline-block;
-            margin-bottom: 15px;
             text-decoration: none;
-            transition: color 0.3s ease;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo Botón Mapa */
+        .map-link {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #f4f4f4;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         .map-link:hover {
+            background-color: rgba(206, 17, 38, 0.2);
             color: var(--cr-red);
-            text-decoration: underline;
+            border-color: var(--cr-red);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(206, 17, 38, 0.2);
         }
+
+        /* Estilo Botón Portal */
         .portal-link {
-            display: inline-block;
-            margin-top: 5px;
-            margin-bottom: 15px;
+            background-color: rgba(0, 43, 127, 0.15);
             color: #93c5fd;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px dashed var(--cr-blue);
-            transition: all 0.3s ease;
+            border: 2px solid var(--cr-blue);
         }
         .portal-link:hover {
+            background-color: var(--cr-blue);
             color: var(--cr-white);
-            border-color: var(--cr-white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 43, 127, 0.4);
         }
+
+        /* Estilo Botón Formulario */
+        .form-link {
+            background-color: var(--cr-blue);
+            color: var(--cr-white);
+            border: 2px solid var(--cr-blue);
+            margin-top: 15px;
+        }
+        .form-link:hover {
+            background-color: #003db3; /* Un azul un poco más claro para hover */
+            color: var(--cr-white);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 43, 127, 0.5);
+            border-color: #003db3;
+        }
+        
         .cta-note {
             margin-top: 20px;
             padding: 15px 20px;
@@ -181,20 +212,6 @@
             color: #fca5a5;
         }
         
-        .form-link {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            font-size: 1.1rem;
-            color: #93c5fd;
-            text-decoration: underline;
-            font-weight: 800;
-            transition: color 0.3s ease;
-        }
-        
-        .form-link:hover {
-            color: var(--cr-white);
-        }
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -352,6 +369,10 @@
             color: #94a3b8;
             font-size: 0.9rem;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
         }
         footer strong {
             color: var(--cr-white);
@@ -361,6 +382,7 @@
             .subtitle-propuesta { font-size: 0.95rem; }
             .alert-banner h2 { font-size: 1.3rem; }
             .alert-banner p { font-size: 1.15rem; }
+            .map-link, .portal-link, .form-link { width: 100%; margin: 10px 0; }
             .grid { grid-template-columns: 1fr; }
             .cta-note { text-align: center; border-left: none; border-top: 4px solid var(--cr-red); }
         }
@@ -388,15 +410,22 @@
         <div class="alert-banner">
             <h2>📢 Convocatoria a Audiencia Pública</h2>
             <p>Jueves 05 de Noviembre de 2026 • 5:00 PM</p>
-            <a href="https://maps.app.goo.gl/FYUnREaGcNpioUZC9" target="_blank" rel="noopener noreferrer" class="map-link">
-                📍 Estadio Edgardo Baltodano Briceño ↗
-            </a>
-            <br>
-            <a href="https://www.muniliberia.go.cr" target="_blank" rel="noopener noreferrer" class="portal-link">🌐 Infórmese accediendo al Portal Oficial de la Municipalidad de Liberia &rarr;</a>
+            <div>
+                <a href="https://maps.app.goo.gl/FYUnREaGcNpioUZC9" target="_blank" rel="noopener noreferrer" class="map-link">
+                    📍 Ver en Mapa: Estadio Edgardo Baltodano Briceño
+                </a>
+            </div>
+            <div>
+                <a href="https://www.muniliberia.go.cr" target="_blank" rel="noopener noreferrer" class="portal-link">
+                    🌐 Visitar Portal Oficial de la Municipalidad
+                </a>
+            </div>
             <div class="cta-note">
                 ✍️ <strong>¡Haga oír su voz!</strong> Se invita cordialmente a toda la ciudadanía, comunidades y organizaciones a presentar sus propios aportes y observaciones técnicas formales sobre el POT 2026 ante la Municipalidad de Liberia antes de la realización de la audiencia pública.
                 <br>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzQPHhCWgeF_X2MZkuf-R_dcQA43aAmcewF3CSSYQQgf-G9A/formResponse?fbclid=IwY2xjawVItZNleHRuA2FlbQIxMQBwZG9mBXNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHm5Nd5uwJsN1wEgWqWmg8WUpSvjKLhNEpluCjrxBmNmii0WjIvegV_AvOGek_aem_MDUtaU7nD1CsluOvj55B0Q" target="_blank" rel="noopener noreferrer" class="form-link">Inscríbase AQUÍ   ⬇️ *</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzQPHhCWgeF_X2MZkuf-R_dcQA43aAmcewF3CSSYQQgf-G9A/formResponse?fbclid=IwY2xjawVItZNleHRuA2FlbQIxMQBwZG9mBXNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHm5Nd5uwJsN1wEgWqWmg8WUpSvjKLhNEpluCjrxBmNmii0WjIvegV_AvOGek_aem_MDUtaU7nD1CsluOvj55B0Q" target="_blank" rel="noopener noreferrer" class="form-link">
+                    📝 Clic aquí para inscribirse al formulario
+                </a>
             </div>
         </div>
         <div class="grid">
@@ -611,8 +640,16 @@
             <div style="font-size: 0.9rem; color: #93c5fd; margin-top: 5px; font-weight: 400; letter-spacing: 0;">Actual presentadas 14 de 20 Total</div>
         </div>
         <footer>
-            <p>Iniciativa ciudadana impulsada por <strong>Alejandro Soto Barquero</strong><br>
-            Aportes técnicos basados en la Ley de Planificación Urbana N.º 4240</p>
+            <span>Iniciativa ciudadana impulsada por</span>
+            <strong>Alejandro Soto Barquero</strong>
+            <span style="display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; margin-top: 5px;">
+                Puede clonar esta página, crear propias observaciones y luego publicarlas con base el repositorio en GitHub:
+                <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle;">
+                    <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+                </svg>
+                <a href="https://github.com/asoto59g/Observaciones_POTLiberia_2026" target="_blank" rel="noopener noreferrer" style="color: #93c5fd; text-decoration: none; font-weight: 600;">asoto59g/Observaciones_POTLiberia_2026</a>
+            </span>
+            <span>Aportes técnicos basados en la Ley de Planificación Urbana N.º 4240</span>
         </footer>
     </div>
     <!-- SCRIPT DE REPRODUCCIÓN CONTINUA (PLAYLIST) -->
