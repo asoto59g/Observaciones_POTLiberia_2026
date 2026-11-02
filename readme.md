@@ -23,6 +23,9 @@ Para mantener a la comunidad informada de manera automática y sin comprometer d
 
 ## 📄 Archivos de Observaciones (PDF y Audio)
 
+*   **es-20261102:**
+    *   **Tema:** Adenda Drenaje Pluvial - Capa municipal de anegamiento.
+    *   **Resumen:** Actualización y sustitución formal del oficio del 17 de octubre. Aporta cartografía complementaria (`tiposinundables.geojson`) sobre zonas problemáticas de anegamiento y exige evaluar la obsolescencia del alcantarillado pluvial urbano ante los transectos de alta densificación propuestos.
 *   **es-20261030:**
     *   **Tema:** Saneamiento Ambiental - Regulación de Aguas Residuales y Vertidos.
     *   **Resumen:** Exigencia de condicionar la densificación (Transectos T5 y T6) a la instalación de Plantas de Tratamiento (PTAR) y prohibir estrictamente conexiones ilegales de aguas negras al sistema pluvial municipal.
