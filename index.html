@@ -190,7 +190,7 @@
             width: 100%;
         }
         .form-link:hover {
-            background-color: #003db3; /* Un azul un poco más claro para hover */
+            background-color: #003db3; 
             color: var(--cr-white);
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0, 43, 127, 0.5);
@@ -212,10 +212,62 @@
             border-radius: 8px;
             border: 2px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            cursor: pointer; /* Hace que el cursor parezca un botón clickeable */
         }
         .qr-image:hover {
             transform: scale(1.1);
+            border-color: var(--cr-white);
+        }
+
+        /* Estilos del Modal (Visor de pantalla completa para el QR) */
+        .qr-modal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            animation: fadeIn 0.3s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .qr-modal-content {
+            max-width: 90%;
+            max-height: 70vh;
+            border: 5px solid var(--cr-white);
+            border-radius: 15px;
+            box-shadow: 0 0 40px var(--cr-blue-glow);
+        }
+        .qr-modal-caption {
+            margin-top: 20px;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .qr-modal-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #fff;
+            font-size: 45px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .qr-modal-close:hover {
+            color: var(--cr-red);
         }
         
         .cta-note {
@@ -411,6 +463,10 @@
             .qr-action-container {
                 flex-direction: column;
             }
+            .qr-modal-close {
+                top: 15px;
+                right: 25px;
+            }
         }
     </style>
 </head>
@@ -450,7 +506,7 @@
                 ✍️ <strong>¡Haga oír su voz!</strong> Se invita cordialmente a toda la ciudadanía, comunidades y organizaciones a presentar sus propios aportes y observaciones técnicas formales sobre el POT 2026 ante la Municipalidad de Liberia antes de la realización de la audiencia pública.
                 
                 <div class="qr-action-container">
-                    <img src="FormAudPub.jpg" alt="Código QR para el formulario de inscripción" class="qr-image">
+                    <img src="FormAudPub.jpg" alt="Código QR para el formulario de inscripción" class="qr-image" title="Clic para ampliar y escanear" onclick="document.getElementById('modalQR').style.display='flex'">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzQPHhCWgeF_X2MZkuf-R_dcQA43aAmcewF3CSSYQQgf-G9A/formResponse?fbclid=IwY2xjawVItZNleHRuA2FlbQIxMQBwZG9mBXNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHm5Nd5uwJsN1wEgWqWmg8WUpSvjKLhNEpluCjrxBmNmii0WjIvegV_AvOGek_aem_MDUtaU7nD1CsluOvj55B0Q" target="_blank" rel="noopener noreferrer" class="form-link">
                         📝 Clic aquí para inscribirse al formulario
                     </a>
@@ -696,6 +752,14 @@
             <span>Aportes técnicos basados en la Ley de Planificación Urbana N.º 4240</span>
         </footer>
     </div>
+    
+    <!-- Modal (Lightbox) oculto para mostrar el QR en grande -->
+    <div id="modalQR" class="qr-modal" onclick="this.style.display='none'">
+        <span class="qr-modal-close">&times;</span>
+        <img class="qr-modal-content" src="FormAudPub.jpg" alt="Código QR en pantalla completa">
+        <div class="qr-modal-caption">Escanea este código con la cámara de tu celular</div>
+    </div>
+
     <!-- SCRIPT DE REPRODUCCIÓN CONTINUA (PLAYLIST) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
