@@ -23,6 +23,9 @@ Para mantener a la comunidad informada de manera automática y sin comprometer d
 
 ## 📄 Archivos de Observaciones (PDF y Audio)
 
+*   **es-20261103:**
+    *   **Tema:** Protección Hídrica y Vial ante Macrodesarrollos.
+    *   **Resumen:** Observación formal que exige incorporar criterios preventivos para grandes desarrollos. Solicita estudios hidrogeológicos para amenidades de alto consumo (como lagunas artificiales y campos de golf) y estudios técnicos de tránsito para evitar el colapso de la Ruta Nacional 21.
 *   **es-20261102:**
     *   **Tema:** Adenda Drenaje Pluvial - Capa municipal de anegamiento.
     *   **Resumen:** Actualización y sustitución formal del oficio del 17 de octubre. Aporta cartografía complementaria (`tiposinundables.geojson`) sobre zonas problemáticas de anegamiento y exige evaluar la obsolescencia del alcantarillado pluvial urbano ante los transectos de alta densificación propuestos.

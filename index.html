@@ -213,7 +213,7 @@
             border: 2px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, border-color 0.3s ease;
-            cursor: pointer; /* Hace que el cursor parezca un botón clickeable */
+            cursor: pointer;
         }
         .qr-image:hover {
             transform: scale(1.1);
@@ -222,7 +222,7 @@
 
         /* Estilos del Modal (Visor de pantalla completa para el QR) */
         .qr-modal {
-            display: none; /* Oculto por defecto */
+            display: none;
             position: fixed;
             z-index: 9999;
             left: 0;
@@ -514,10 +514,25 @@
             </div>
         </div>
         <div class="grid">
+
+            <div class="card">
+                <div class="card-tag">Macrodesarrollos</div>
+                <h2>Protección Hídrica y Vial ante Macrodesarrollos <span class="file-name">es-20261103.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <span class="card-date">📅 03 de noviembre de 2026</span>
+                <p>Observación formal que exige incorporar criterios preventivos para grandes desarrollos. Solicita estudios hidrogeológicos para amenidades de alto consumo (como lagunas artificiales y campos de golf) y estudios técnicos de tránsito para evitar el colapso de la Ruta Nacional 21.</p>
+                <div class="action-buttons">
+                    <a href="es-20261103.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-pdf">📄 PDF</a>
+                    <div class="audio-wrapper">
+                        <audio controls preload="metadata" class="audio-player">
+                            <source src="audios/es-20261103.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
             
             <div class="card">
                 <div class="card-tag">Drenaje Pluvial</div>
-                <h2>Adenda: Capa de Inundación y Drenaje <span class="file-name">es-20261102.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <h2>Adenda: Capa de Inundación y Drenaje <span class="file-name">es-20261102.pdf</span></h2>
                 <span class="card-date">📅 02 de noviembre de 2026</span>
                 <p>Actualización y sustitución formal del oficio del 17 de octubre. Aporta capa complementaria (tiposinundables.geojson) de zonas problemáticas y solicita evaluar la obsolescencia del alcantarillado pluvial urbano ante los transectos de alta densificación.</p>
                 <div class="action-buttons">
@@ -737,7 +752,7 @@
         
         <div class="upcoming-teaser">
             ⏳ Espere más observaciones próximamente...
-            <div style="font-size: 0.9rem; color: #93c5fd; margin-top: 5px; font-weight: 400; letter-spacing: 0;">Actual presentadas 14 de 20 Total</div>
+            <div style="font-size: 0.9rem; color: #93c5fd; margin-top: 5px; font-weight: 400; letter-spacing: 0;">Actual presentadas 15 de 20 Total</div>
         </div>
         <footer>
             <span>Iniciativa ciudadana impulsada por</span>
