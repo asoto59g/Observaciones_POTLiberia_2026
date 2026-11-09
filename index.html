@@ -114,9 +114,10 @@
             margin: 0 auto;
             line-height: 1.6;
         }
-        /* 🇨🇷 Banner patriótico con acentos tricolores */
+        
+        /* 🇨🇷 Banner con fondo blanco */
         .alert-banner {
-            background: linear-gradient(135deg, rgba(0, 43, 127, 0.2), rgba(206, 17, 38, 0.15));
+            background: var(--cr-white);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 2px solid var(--cr-blue);
@@ -127,16 +128,17 @@
             box-shadow: 0 0 25px var(--cr-blue-glow);
         }
         .alert-banner h2 {
-            color: var(--cr-white);
+            color: var(--cr-blue);
             font-size: 1.6rem;
             margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-weight: 800;
         }
         .alert-banner p {
-            color: #93c5fd;
+            color: var(--cr-red);
             font-size: 1.3rem;
-            font-weight: 600;
+            font-weight: 800;
             margin-bottom: 5px;
         }
         
@@ -157,9 +159,9 @@
 
         /* Estilo Botón Mapa */
         .map-link {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #f4f4f4;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: #f8fafc;
+            color: #1e293b;
+            border: 1px solid #cbd5e1;
         }
         .map-link:hover {
             background-color: rgba(206, 17, 38, 0.2);
@@ -273,16 +275,18 @@
         .cta-note {
             margin-top: 20px;
             padding: 15px 20px;
-            background: rgba(0, 0, 0, 0.5);
+            background: #f8fafc;
             border-left: 4px solid var(--cr-red);
             border-radius: 8px;
             font-size: 1rem;
-            color: #e0e0e0;
+            color: #1e293b;
             line-height: 1.5;
             text-align: left;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid var(--cr-red);
         }
         .cta-note strong {
-            color: #fca5a5;
+            color: var(--cr-red);
         }
         
         .grid {
@@ -457,7 +461,7 @@
             .alert-banner p { font-size: 1.15rem; }
             .map-link, .portal-link, .form-link { width: 100%; margin: 10px 0; }
             .grid { grid-template-columns: 1fr; }
-            .cta-note { text-align: center; border-left: none; border-top: 4px solid var(--cr-red); }
+            .cta-note { text-align: center; border-left: 1px solid #e2e8f0; border-top: 4px solid var(--cr-red); }
             
             /* Ajuste responsivo para el QR y el botón en móviles */
             .qr-action-container {
@@ -509,8 +513,23 @@
         <div class="grid">
 
             <div class="card">
+                <div class="card-tag">Fraccionamiento y Urbanización</div>
+                <h2>Admisibilidad de Accesos Excepcionales <span class="file-name">es-20261109.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <span class="card-date">📅 09 de noviembre de 2026</span>
+                <p>Solicita revisar la matriz de admisibilidad del Reglamento de Fraccionamiento para permitir accesos excepcionales residenciales (servidumbres) en transectos T3 y T4, exigiendo corregir errores de remisión interna en los artículos 12 y 20.</p>
+                <div class="action-buttons">
+                    <a href="es-20261109.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-pdf">📄 PDF</a>
+                    <div class="audio-wrapper">
+                        <audio controls preload="metadata" class="audio-player">
+                            <source src="audios/es-20261109.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
                 <div class="card-tag">Diseño Urbano / CPTED</div>
-                <h2>Seguridad Espacial y Diseño Inclusivo <span class="file-name">es-20261106.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <h2>Seguridad Espacial y Diseño Inclusivo <span class="file-name">es-20261106.pdf</span></h2>
                 <span class="card-date">📅 06 de noviembre de 2026</span>
                 <p>Aporte constructivo que propone integrar transversalmente lineamientos CPTED (vigilancia natural, iluminación, prevención de espacios residuales) para nuevos desarrollos, junto con un Transitorio vinculante.</p>
                 <div class="action-buttons">
@@ -775,7 +794,7 @@
         
         <div class="upcoming-teaser">
             ⏳ Espere más observaciones próximamente...
-            <div style="font-size: 0.9rem; color: #93c5fd; margin-top: 5px; font-weight: 400; letter-spacing: 0;">Actual presentadas 17 de 20 Total</div>
+            <div style="font-size: 0.9rem; color: #93c5fd; margin-top: 5px; font-weight: 400; letter-spacing: 0;">Actual presentadas 18 de 20 Total</div>
         </div>
         <footer>
             <span>Iniciativa ciudadana impulsada por</span>
