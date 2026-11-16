@@ -23,6 +23,15 @@ Para mantener a la comunidad informada de manera automática y sin comprometer d
 
 ## 📄 Archivos de Observaciones (PDF y Audio)
 
+*   **es-20261116:**
+    *   **Tema:** Espacio Público e Hídrico - Integración de Rondas Hídricas como Parques Lineales.
+    *   **Resumen:** Propone integrar espacial y normativamente las franjas de protección hídrica (rondas de ríos y quebradas) como "Parques Lineales y Corredores Biológicos Urbanos" dentro del Reglamento de Zonificación y Espacio Público. Fomenta que los nuevos proyectos den el frente a estos cauces mediante calles marginales o parques —en lugar de darles la espalda con patios traseros o muros ciegos— para promover la vigilancia natural, evitar botaderos clandestinos, mitigar inundaciones y facilitar el acceso para limpieza preventiva.
+*   **es-20261113:**
+    *   **Tema:** Gestión Integral de Residuos - Puntos Verdes en Nuevos Desarrollos.
+    *   **Resumen:** Propone modificar el Reglamento de Fraccionamiento y Urbanización para exigir diseños espaciales específicos ("Puntos Verdes" o centros de acopio tecnificados bajo la norma técnica INTE 12-01-08 y el Reglamento de Construcciones) en los nuevos desarrollos inmobiliarios de Zonas de Expansión y Franja Mixta, con el fin de mitigar el anegamiento urbano provocado por la acumulación de basura en los tragantes y salvaguardar la salubridad pública.
+*   **es-20261111:**
+    *   **Tema:** Drenaje e Infiltración - Coeficiente de Infiltración Mínima (CIM) y Arborización Privada.
+    *   **Resumen:** Solicita incorporar un Coeficiente de Infiltración Mínima (CIM) obligatorio no menor al 15 % del área total del predio (no canjeable por incentivos urbanísticos) en los transectos T4, T5, T6 y ZE1, fomentando superficies semipermeables de bajo costo (grava, zacate block), áreas verdes absorbentes y arborización privada obligatoria con especies nativas dictadas por el Plan de Arborización Municipal.
 *   **es-20261109:**
     *   **Tema:** Fraccionamiento y Urbanización - Accesos Excepcionales para Uso Residencial.
     *   **Resumen:** Observación ciudadana que solicita revisar la exclusión de los accesos excepcionales (servidumbres residenciales) en los transectos T3 y T4. Exige corregir errores de remisión normativa en los artículos 12 y 20 del proyecto, y fundamentar técnicamente la exclusión o, en su defecto, condicionar su apertura a la disponibilidad efectiva de infraestructura, servicios y normativa ambiental.
