@@ -23,6 +23,15 @@ Para mantener a la comunidad informada de manera automática y sin comprometer d
 
 ## 📄 Archivos de Observaciones (PDF y Audio)
 
+*   **es-20261109:**
+    *   **Tema:** Fraccionamiento y Urbanización - Accesos Excepcionales para Uso Residencial.
+    *   **Resumen:** Observación ciudadana que solicita revisar la exclusión de los accesos excepcionales (servidumbres residenciales) en los transectos T3 y T4. Exige corregir errores de remisión normativa en los artículos 12 y 20 del proyecto, y fundamentar técnicamente la exclusión o, en su defecto, condicionar su apertura a la disponibilidad efectiva de infraestructura, servicios y normativa ambiental.
+*   **es-20261106:**
+    *   **Tema:** Seguridad Espacial y Diseño Inclusivo (CPTED).
+    *   **Resumen:** Aporte técnico constructivo que propone la incorporación transversal de criterios de prevención ambiental del delito (vigilancia natural, iluminación peatonal, control de espacios residuales) aplicables a nuevos desarrollos y diseño del espacio público, respaldado con una propuesta de Transitorio vinculante.
+*   **es-20261104:**
+    *   **Tema:** Sustento Técnico de Vialidad y Movilidad.
+    *   **Resumen:** Observación formal que exige los estudios de tránsito que justifican las propuestas de peatonización y asignación de altas densidades, condicionando el POT a la capacidad real de la red vial cantonal y solicitando acceso a los documentos de respaldo.
 *   **es-20261103:**
     *   **Tema:** Protección Hídrica y Vial ante Macrodesarrollos.
     *   **Resumen:** Observación formal que exige incorporar criterios preventivos para grandes desarrollos. Solicita estudios hidrogeológicos para amenidades de alto consumo (como lagunas artificiales y campos de golf) y estudios técnicos de tránsito para evitar el colapso de la Ruta Nacional 21.
