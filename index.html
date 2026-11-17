@@ -957,7 +957,25 @@
             const audios = document.querySelectorAll('.audio-player');
             
             audios.forEach((audio, index) => {
-                // Evento 1: Cuando el audio actual termina, reproducir el siguiente
+                // Pausar otros audios si se inicia uno manualmente
+                audio.addEventListener('play', () => {
+                    audios.forEach((otherAudio, otherIndex) => {
+                        if (otherIndex !== index && !otherAudio.paused) {
+                            otherAudio.pause();
+                        }
+                    });
+                });
+
+                // Cuando el audio actual termina, reproducir el siguiente
                 audio.addEventListener('ended', () => {
-                    // Verificamos que no sea el último audio de la lista
-                    if (index + 1 < audios.length)
+                    if (index + 1 < audios.length) {
+                        const nextAudio = audios[index + 1];
+                        nextAudio.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        nextAudio.play().catch(err => console.log('Reproducción automática bloqueada:', err));
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
