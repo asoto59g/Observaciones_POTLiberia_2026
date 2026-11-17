@@ -115,17 +115,16 @@
             line-height: 1.6;
         }
         
-        /* 🇨🇷 Banner con fondo blanco */
+        /* 🇨🇷 Cajetín / Banner con fondo blanco */
         .alert-banner {
             background: var(--cr-white);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             border: 2px solid var(--cr-blue);
             border-radius: 15px;
-            padding: 25px;
+            padding: 30px;
             text-align: center;
             margin-bottom: 50px;
             box-shadow: 0 0 25px var(--cr-blue-glow);
+            color: #1e293b;
         }
         .alert-banner h2 {
             color: var(--cr-blue);
@@ -135,11 +134,84 @@
             letter-spacing: 1px;
             font-weight: 800;
         }
-        .alert-banner p {
+        .alert-banner > p.deadline-text {
             color: var(--cr-red);
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 800;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Sección de Resumen de Cierre y Hoja de Ruta */
+        .closing-summary {
+            margin: 20px 0 0 0;
+            padding: 22px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-top: 4px solid var(--cr-blue);
+            border-radius: 12px;
+            text-align: left;
+            box-shadow: 0 4px 14px rgba(0, 43, 127, 0.08);
+        }
+        .closing-summary-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--cr-blue);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+            margin-bottom: 16px;
+        }
+        .roadmap-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid var(--cr-blue);
+            border-radius: 10px;
+            padding: 16px;
+        }
+        .roadmap-box.vision-box {
+            border-left-color: #0f766e;
+        }
+        .roadmap-box h3 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--cr-blue);
+            margin-bottom: 8px;
+        }
+        .roadmap-box.vision-box h3 {
+            color: #0f766e;
+        }
+        .roadmap-box p, .roadmap-box li {
+            font-size: 0.92rem;
+            color: #334155;
+            line-height: 1.55;
+        }
+        .roadmap-box ul {
+            margin-left: 18px;
+            margin-top: 6px;
+        }
+        .roadmap-box li {
+            margin-bottom: 4px;
+        }
+        .approval-estimate {
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+            border-left: 4px solid var(--cr-red);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 0.95rem;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+        .approval-estimate strong {
+            color: var(--cr-red);
         }
         
         /* Botones de acción mejorados */
@@ -147,14 +219,14 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin: 10px;
+            margin: 8px 0;
             padding: 12px 24px;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             text-decoration: none;
             border-radius: 8px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
         }
 
         /* Estilo Botón Mapa */
@@ -164,7 +236,7 @@
             border: 1px solid #cbd5e1;
         }
         .map-link:hover {
-            background-color: rgba(206, 17, 38, 0.2);
+            background-color: rgba(206, 17, 38, 0.12);
             color: var(--cr-red);
             border-color: var(--cr-red);
             transform: translateY(-2px);
@@ -194,8 +266,8 @@
         .form-link:hover {
             background-color: #003db3; 
             color: var(--cr-white);
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 43, 127, 0.5);
+            transform: scale(1.01);
+            box-shadow: 0 8px 20px rgba(0, 43, 127, 0.4);
             border-color: #003db3;
         }
 
@@ -269,23 +341,6 @@
             transition: color 0.3s;
         }
         .qr-modal-close:hover {
-            color: var(--cr-red);
-        }
-        
-        .cta-note {
-            margin-top: 20px;
-            padding: 15px 20px;
-            background: #f8fafc;
-            border-left: 4px solid var(--cr-red);
-            border-radius: 8px;
-            font-size: 1rem;
-            color: #1e293b;
-            line-height: 1.5;
-            text-align: left;
-            border: 1px solid #e2e8f0;
-            border-left: 4px solid var(--cr-red);
-        }
-        .cta-note strong {
             color: var(--cr-red);
         }
         
@@ -422,16 +477,9 @@
             border-radius: 25px;
             outline: none;
         }
-        .disclaimer-note {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.9rem;
-            color: #94a3b8;
-            font-style: italic;
-        }
         .upcoming-teaser {
             text-align: center;
-            margin: 15px 0 20px 0;
+            margin: 50px 0 20px 0;
             font-size: 1.2rem;
             color: #93c5fd;
             font-weight: 600;
@@ -457,11 +505,11 @@
         @media (max-width: 768px) {
             header h1 { font-size: 2.2rem; }
             .subtitle-propuesta { font-size: 0.95rem; }
+            .alert-banner { padding: 20px; }
             .alert-banner h2 { font-size: 1.3rem; }
-            .alert-banner p { font-size: 1.15rem; }
-            .map-link, .portal-link, .form-link { width: 100%; margin: 10px 0; }
+            .alert-banner > p.deadline-text { font-size: 1.1rem; }
+            .map-link, .portal-link, .form-link { width: 100%; margin: 8px 0; }
             .grid { grid-template-columns: 1fr; }
-            .cta-note { text-align: center; border-left: 1px solid #e2e8f0; border-top: 4px solid var(--cr-red); }
             
             /* Ajuste responsivo para el QR y el botón en móviles */
             .qr-action-container {
@@ -484,37 +532,72 @@
             <h1>POT Liberia 2026</h1>
             <div class="subtitle-propuesta">Propuesta Plan Regulador • Costa Rica</div>
             <p>Repositorio ciudadano de observaciones técnicas formales presentadas para la defensa del ordenamiento territorial, la movilidad y el ambiente en el cantón de Liberia.</p>
-    <div style="text-align: center; margin-bottom: 20px;">
-        <img src="https://img.shields.io/github/stars/asoto59g/Observaciones_POTLiberia_2026?style=social" alt="GitHub stars">
-        <img src="https://img.shields.io/github/forks/asoto59g/Observaciones_POTLiberia_2026?style=social" alt="GitHub forks">
-        <img src="https://img.shields.io/github/watchers/asoto59g/Observaciones_POTLiberia_2026?style=social" alt="GitHub watchers">
-        <img src="https://img.shields.io/github/issues/asoto59g/Observaciones_POTLiberia_2026" alt="GitHub issues">
-        <img src="https://img.shields.io/github/license/asoto59g/Observaciones_POTLiberia_2026" alt="GitHub license">
-    </div>
-    
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="https://img.shields.io/github/stars/asoto59g/Observaciones_POTLiberia_2026?style=social" alt="GitHub stars">
+                <img src="https://img.shields.io/github/forks/asoto59g/Observaciones_POTLiberia_2026?style=social" alt="GitHub forks">
+                <img src="https://img.shields.io/github/watchers/asoto59g/Observaciones_POTLiberia_2026?style=social" alt="GitHub watchers">
+                <img src="https://img.shields.io/github/issues/asoto59g/Observaciones_POTLiberia_2026" alt="GitHub issues">
+                <img src="https://img.shields.io/github/license/asoto59g/Observaciones_POTLiberia_2026" alt="GitHub license">
+            </div>
         </header>
+
+        <!-- Cajetín con fondo blanco: Resumen de cierre y hoja de ruta -->
         <div class="alert-banner">
-            <h2>📢 Convocatoria a Presentación de Observaciones</h2>
-            <p>Fecha límite: Martes 17 de noviembre de 2026</p>
-            <div>
-                <a href="mailto:planregulador@muniliberia.go.cr" class="form-link" style="margin-bottom: 10px;">
-                    ✉️ Enviar por correo: planregulador@muniliberia.go.cr
-                </a>
-            </div>
-            <div>
-                <a href="https://maps.app.goo.gl/B9Z2wNqL1H1D9qU56" target="_blank" rel="noopener noreferrer" class="map-link" style="width: 100%;">
-                    📍 Entrega Física: Recepción Municipalidad de Liberia
-                </a>
-            </div>
-            <div class="cta-note">
-                ✍️ <strong>¡Haga oír su voz!</strong> Se invita cordialmente a toda la ciudadanía, comunidades y organizaciones a presentar sus propios aportes y observaciones técnicas formales sobre el POT 2026 ante la Municipalidad de Liberia. Las observaciones deben entregarse físicamente o enviarse por correo electrónico antes del 17 de noviembre de 2026.
+            <h2>📢 Cierre de Observaciones y siguientes pasos</h2>
+            <p class="deadline-text">Después del Martes 17 de noviembre de 2026</p>
+
+            <div class="closing-summary">
+                <div class="closing-summary-title">
+                    🧭 Hoja de Ruta y Visión de Cierre del POT Liberia 2026
+                </div>
+                <div class="roadmap-grid">
+                    <div class="roadmap-box">
+                        <h3>1. Ruta Institucional y Revisión a 6 Meses</h3>
+                        <p>Tras el cierre de recepción de observaciones, el POT deberá superar los siguientes avales técnicos y legales antes de entrar en vigencia:</p>
+                        <ul>
+                            <li><strong>SETENA:</strong> Viabilidad Ambiental definitiva del plan.</li>
+                            <li><strong>SENARA:</strong> Aval técnico de la matriz hidrogeológica.</li>
+                            <li><strong>INVU:</strong> Revisión y Visado de la Dirección de Urbanismo.</li>
+                            <li><strong>Concejo Municipal:</strong> Aprobación definitiva y publicación en <em>La Gaceta</em>.</li>
+                            <li><strong>Revisión Temprana (6 meses):</strong> Compromiso para convocar a la primera actualización de mejora a los 6 meses de vigencia, creando un banco de mejoras con los aportes pendientes.</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-box vision-box">
+                        <h3>2. Hacia un POT Dinámico, Perfectible y Participativo</h3>
+                        <p><strong>Visión Sustentable para el Cantón de Liberia 2026–2030:</strong></p>
+                        <ul>
+                            <li>Concebir el Plan de Ordenamiento Territorial como una <strong>herramienta viva y en mejora continua</strong>, no como un estatuto estático.</li>
+                            <li>Integrar la participación ciudadana de buena fe (<em>Principio de Informalismo</em>) para fortalecer la resiliencia hídrica, ambiental y vial del cantón.</li>
+                            <li>Consolidar un desarrollo urbano ordenado, transparente y adaptado a la realidad de Liberia.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="approval-estimate">
+                    📅 <strong>Estimación del trámite de aprobación final:</strong> Se estima que la aprobación definitiva del POT por parte del <strong>Concejo Municipal de Liberia</strong> se dará aproximadamente entre los <strong>meses de marzo y abril de 2027</strong> <em>(estimación personal sujeta al avance de las revisiones en SETENA, SENARA e INVU)</em>.
+                </div>
             </div>
         </div>
+
         <div class="grid">
 
             <div class="card">
+                <div class="card-tag">Cierre y Hoja de Ruta</div>
+                <h2>Oficio de Cierre y Consolidación <span class="file-name">es-20261117-Cierre.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <span class="card-date">📅 17 de noviembre de 2026</span>
+                <p>Unifica la totalidad de aportes ciudadanos presentados al POT Liberia 2026 como un cuerpo integral de mejora continua. Exige aplicar el Principio de Informalismo (LGAP) para no rechazar gestiones por forma, traza la ruta ante SETENA, SENARA e INVU, y propone convocar a una revisión temprana de mejora a los 6 meses de vigencia.</p>
+                <div class="action-buttons">
+                    <a href="es-20261117-Cierre.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-pdf">📄 PDF</a>
+                    <div class="audio-wrapper">
+                        <audio controls preload="metadata" class="audio-player">
+                            <source src="audios/es-20261117-Cierre.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
                 <div class="card-tag">Espacio Público e Hídrico</div>
-                <h2>Rondas Hídricas como Parques Lineales <span class="file-name">es-20261116.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <h2>Rondas Hídricas como Parques Lineales <span class="file-name">es-20261116.pdf</span></h2>
                 <span class="card-date">📅 16 de noviembre de 2026</span>
                 <p>Propone integrar espacial y normativamente las franjas de protección hídrica (rondas de ríos y quebradas) como "Parques Lineales y Corredores Biológicos Urbanos" en el Reglamento de Zonificación y Espacio Público, fomentando que los nuevos proyectos den el frente a los cauces mediante calles marginales o parques para promover vigilancia natural, evitar botaderos clandestinos, mitigar inundaciones y facilitar la limpieza preventiva.</p>
                 <div class="action-buttons">
@@ -529,7 +612,7 @@
 
             <div class="card">
                 <div class="card-tag">Gestión de Residuos</div>
-                <h2>Puntos Verdes en Nuevos Desarrollos <span class="file-name">es-20261113.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <h2>Puntos Verdes en Nuevos Desarrollos <span class="file-name">es-20261113.pdf</span></h2>
                 <span class="card-date">📅 13 de noviembre de 2026</span>
                 <p>Propone incluir directrices espaciales en el Reglamento de Fraccionamiento y Urbanización para exigir "Puntos Verdes" o centros de acopio tecnificados (bajo norma INTE 12-01-08) en los nuevos desarrollos inmobiliarios de Zonas de Expansión y Franja Mixta, con el objetivo de mitigar el anegamiento urbano provocado por la acumulación de basura en los tragantes y salvaguardar la salubridad pública.</p>
                 <div class="action-buttons">
@@ -544,7 +627,7 @@
 
             <div class="card">
                 <div class="card-tag">Drenaje e Infiltración</div>
-                <h2>Coeficiente de Infiltración Mínima (CIM) <span class="file-name">es-20261111.pdf</span> <sup class="badge-new">NUEVO</sup></h2>
+                <h2>Coeficiente de Infiltración Mínima (CIM) <span class="file-name">es-20261111.pdf</span></h2>
                 <span class="card-date">📅 11 de noviembre de 2026</span>
                 <p>Solicita incorporar un Coeficiente de Infiltración Mínima (CIM) obligatorio no menor al 15% del área del predio (no canjeable por incentivos) en los transectos T4, T5, T6 y ZE1, fomentando superficies semipermeables de bajo costo, áreas verdes absorbentes y arborización privada obligatoria con especies nativas en los nuevos desarrollos urbanísticos.</p>
                 <div class="action-buttons">
@@ -676,6 +759,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-tag">Ciudad Inteligente</div>
                 <h2>Estrategia y Proyectos IoT <span class="file-name">es-20261023.pdf</span></h2>
@@ -690,6 +774,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-tag">Datos Abiertos</div>
                 <h2>Geoportal Interactivo Oficial <span class="file-name">es-20261022.pdf</span></h2>
@@ -704,6 +789,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-tag">Espacio Público</div>
                 <h2>Chatarra Aérea y Cableado <span class="file-name">es-20261021.pdf</span></h2>
@@ -718,6 +804,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-tag">Costas / ZMT</div>
                 <h2>Inconsistencia Cartográfica (Playa Iguanita) <span class="file-name">es-20261020.pdf</span></h2>
@@ -732,6 +819,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-tag">Vialidad Nacional</div>
                 <h2>Reserva Preventiva en Ruta Nacional 21 <span class="file-name">es-2026101901.pdf</span></h2>
@@ -746,6 +834,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-tag">Urbanismo</div>
                 <h2>Secuenciación de Peatonización Central <span class="file-name">es-2026101902.pdf</span></h2>
@@ -790,6 +879,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-tag">Movilidad</div>
                 <h2>Pacificación del Tránsito a 40 km/h <span class="file-name">es-20261014.pdf</span></h2>
@@ -804,6 +894,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-tag">Vialidad Urbana</div>
                 <h2>Prohibición de Estacionamiento en INVU 2 <span class="file-name">es-20261008.pdf</span></h2>
@@ -818,6 +909,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-tag">Zonificación</div>
                 <h2>Inviabilidad Transecto T6 en Calle 11F <span class="file-name">es-20261005.pdf</span></h2>
@@ -833,13 +925,10 @@
                 </div>
             </div>
         </div>
-        <div class="disclaimer-note">
-            * Significa que solo ciudadanos inscritos en el padrón electoral del cantón, pueden hacer las observaciones respectivas al POT 2026
-        </div>
         
         <div class="upcoming-teaser">
-            ⏳ Espere más observaciones próximamente...
-            <div style="font-size: 0.9rem; color: #93c5fd; margin-top: 5px; font-weight: 400; letter-spacing: 0;">Actual presentadas 21 observaciones</div>
+            ✅ Terminado proceso de entrega de observaciones
+            <div style="font-size: 0.9rem; color: #93c5fd; margin-top: 5px; font-weight: 400; letter-spacing: 0;">Total presentadas: 22 observaciones formales (incluye Oficio de Cierre)</div>
         </div>
         <footer>
             <span>Iniciativa ciudadana impulsada por</span>
@@ -871,30 +960,4 @@
                 // Evento 1: Cuando el audio actual termina, reproducir el siguiente
                 audio.addEventListener('ended', () => {
                     // Verificamos que no sea el último audio de la lista
-                    if (index + 1 < audios.length) {
-                        const nextAudio = audios[index + 1];
-                        
-                        // Hacemos scroll suave hacia la tarjeta del siguiente audio
-                        nextAudio.closest('.card').scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'center'
-                        });
-                        
-                        // Iniciamos la reproducción del siguiente
-                        nextAudio.play();
-                    }
-                });
-                
-                // Evento 2: Si el usuario da "play", pausar los demás audios
-                audio.addEventListener('play', () => {
-                    audios.forEach((otherAudio) => {
-                        if (otherAudio !== audio) {
-                            otherAudio.pause();
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+                    if (index + 1 < audios.length)
