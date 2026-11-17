@@ -23,6 +23,9 @@ Para mantener a la comunidad informada de manera automática y sin comprometer d
 
 ## 📄 Archivos de Observaciones (PDF y Audio)
 
+*   **es-20261117-Cierre:**
+    *   **Tema:** Oficio de Cierre y Consolidación - Visión Integral, Principio de Informalismo y Revisión Temprana a 6 Meses.
+    *   **Resumen:** Unifica la totalidad de los aportes ciudadanos presentados al POT Liberia 2026 como un cuerpo integral de mejora continua. Exige aplicar el Principio de Informalismo y Verdad Material (Art. 214 LGAP) para evitar rechazos por rigorismos de forma o imprecisiones competenciales, desmonta la falsa dicotomía de que mejorar el plan obliga a reiniciarlo, traza la ruta institucional pendiente ante SETENA, SENARA e INVU, y propone el compromiso vinculante de convocar a una primera revisión temprana de mejora a los 6 meses de vigencia del plan utilizando un inventario formal de observaciones pendientes.
 *   **es-20261116:**
     *   **Tema:** Espacio Público e Hídrico - Integración de Rondas Hídricas como Parques Lineales.
     *   **Resumen:** Propone integrar espacial y normativamente las franjas de protección hídrica (rondas de ríos y quebradas) como "Parques Lineales y Corredores Biológicos Urbanos" dentro del Reglamento de Zonificación y Espacio Público. Fomenta que los nuevos proyectos den el frente a estos cauces mediante calles marginales o parques —en lugar de darles la espalda con patios traseros o muros ciegos— para promover la vigilancia natural, evitar botaderos clandestinos, mitigar inundaciones y facilitar el acceso para limpieza preventiva.
